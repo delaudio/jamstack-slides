@@ -1,0 +1,703 @@
+import { themes } from "mdx-deck";
+import hydra from "./images/hydra.png";
+import olivia from "./images/olivia.jpg";
+import fdg from "./images/fdg.jpeg";
+import bg from "./images/hero.png";
+import hydraColor from "./images/hydra-color.png";
+import hydraOsc from "./images/hydra-osc.png";
+
+export const theme = themes.future;
+
+<div
+  style={{
+    width: "100%",
+    height: "100%",
+    backgroundImage: `url(${bg})`,
+    backgroundSize: "100%",
+    backgroundColor: "black",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexFlow: "column wrap",
+    padding: "20%",
+  }}
+>
+  <h1 style={{ fontSize: "4rem", marginTop: "60%", textAlign: "center" }}>
+    INTRODUCTION TO JAMSTACK
+  </h1>
+</div>
+
+---
+
+<div
+  style={{
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "20%",
+  }}
+>
+  <div style={{ width: "50%" }}>
+    <h1 style={{ fontSize: "15rem" }}>👋</h1>
+  </div>
+  <div style={{ width: "50%" }}>
+    <h1>Hi!</h1>
+  </div>
+</div>
+
+---
+
+<img
+  style={{ height: "200px", width: "auto", borderRadius: "100%" }}
+  src={fdg}
+/>
+
+<br />
+
+### FEDERICO DEL GAUDIO
+
+<a href="github.com/delaudio" style={{ color: "#E88DA3" }}>
+  github.com/delaudio
+</a>
+
+- Software Engineer @ PatchAi
+- ❤️ Jamstack
+- ❤️ Generative Design and Music
+
+---
+
+## WHAT IS JAMSTACK?
+
+<img
+  style={{ height: "70%", width: "auto" }}
+  src={"https://media.giphy.com/media/3oEduQa1Mhef81t7wY/giphy.gif"}
+/>
+
+---
+
+<p style={{ color: "#E88DA3" }}>JAM stands for JavaScript, API & Markup.</p>
+
+<div style={{ margin: "0 20%", textAlign: "center" }}>
+  <p>
+    "A modern web development architecture based on client-side JavaScript,
+    reusable APIs, and prebuilt Markup"
+  </p>
+  <p style={{ fontSize: "20px", color: "#B6B6B6" }}>
+    Mathias Biilmann (CEO & Co-founder of Netlify).
+  </p>
+</div>
+
+---
+
+## JAM
+
+<div style={{ margin: "0", display: "flex" }}>
+  <div style={{ width: "30%", margin: "0 5%" }}>
+    <p>JavaScript</p>
+    <p style={{ fontSize: "20px", color: "#B6B6B6" }}>
+      Dynamic functionalities are handled by JavaScript.
+      <br />
+      There is no restriction on which framework or library you must use.
+    </p>
+  </div>
+  <div style={{ width: "30%", margin: "0 5%" }}>
+    <p>Markup</p>
+    <p style={{ fontSize: "20px", color: "#B6B6B6" }}>
+      Websites are served as static HTML files.
+      <br />
+      These can be generated from source files, <br />
+      such as Markdown, using a Static Site Generator.
+    </p>
+  </div>
+  <div style={{ width: "30%", margin: "0 5%" }}>
+    <p>APIs</p>
+    <p style={{ fontSize: "20px", color: "#B6B6B6" }}>
+      Server side operations are abstracted into reusable APIs and <br />
+      accessed over HTTPS with JavaScript.
+      <br />
+      These can be third party services or your custom function.
+    </p>
+  </div>
+</div>
+
+---
+
+## BENEFITS
+
+<div style={{ margin: "0 5%", display: "flex" }}>
+  <div style={{ width: "40%", marginRight: "20%" }}>
+    <p style={{ marginBottom: "10px" }}>Faster performance</p>
+    <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+      Serve pre-built markup and assets over a CDN
+    </p>
+    <p style={{ marginBottom: "10px" }}>More secure</p>
+    <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+      No need to worry about server or database vulnerabilities
+    </p>
+    <p style={{ marginBottom: "10px" }}>Less expensive</p>
+    <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+      Hosting of static files are cheap or even free
+    </p>
+  </div>
+  <div style={{ width: "40%" }}>
+    <p style={{ marginBottom: "10px" }}>Better developer experience</p>
+    <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+      Front end developers can focus on the front end, without being tied to a
+      monolithic architecture.
+      <br />
+      This usually means quicker and more focused development
+    </p>
+    <p style={{ marginBottom: "10px" }}>Scalability</p>
+    <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+      If your product suddenly goes viral and has many active users, <br />
+      the CDN seamlessly compensates
+    </p>
+  </div>
+</div>
+
+---
+
+<img
+  style={{ height: "70%", width: "auto" }}
+  src={"https://media.giphy.com/media/JtGDzscqwsLdP6eYJf/giphy.gif"}
+/>
+
+## WHAT A JAM!
+
+---
+
+## BEST PRACTICES
+
+<div style={{ margin: "0 5%", display: "flex" }}>
+  <div style={{ width: "40%", marginRight: "20%" }}>
+    <p style={{ marginBottom: "10px" }}>Content delivery network</p>
+    <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+      Since all the markup and assets are pre-built, they can be served via CDN.
+      <br />
+      This provides better performance and easier scalability.
+    </p>
+    <p style={{ marginBottom: "10px" }}>Atomic deploys</p>
+    <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+      Each deploy is a full snapshot of the site. This helps guarantee a
+      consistent version of the site globally.
+    </p>
+    <p style={{ marginBottom: "10px" }}>Cache invalidation</p>
+    <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+      Once your build is uploaded, the CDN invalidates its cache. This means
+      that your new build is live in an instant.
+    </p>
+  </div>
+  <div style={{ width: "40%" }}>
+    <p style={{ marginBottom: "10px" }}>Everything in version control</p>
+    <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+      Your codebase lives in Version Control System, such as Git. The main
+      benefits are: change history of every file, collaborators and
+      traceability.
+      <br />
+      This usually means quicker and more focused development
+    </p>
+    <p style={{ marginBottom: "10px" }}>Automated builds</p>
+    <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+      Your server is notified when a new build is required, typically via
+      webhooks. Server builds the project, updates the CDNs and the site is
+      live.
+    </p>
+  </div>
+</div>
+
+---
+
+## WORKFLOW
+
+<div style={{ margin: "0", display: "flex" }}>
+  <div style={{ width: "30%", margin: "0 5%" }}>
+    <p style={{ marginBottom: "10px", color: "#01F5C4" }}>Develop</p>
+    <p style={{ marginBottom: "10px" }}>Version Control</p>
+  </div>
+  <div style={{ width: "30%", margin: "0 5%" }}>
+    <p style={{ marginBottom: "10px", color: "#FE871E" }}>Automated build</p>
+    <p style={{ marginBottom: "10px" }}>Static assets</p>
+    <p style={{ marginBottom: "10px" }}>Atomic deploy</p>
+    <p style={{ marginBottom: "10px" }}>Pre-render & invalidate cache</p>
+  </div>
+  <div style={{ width: "30%", margin: "0 5%" }}>
+    <p style={{ marginBottom: "10px", color: "#E88DA3" }}>Update CDN</p>
+  </div>
+</div>
+
+---
+
+## READY TO DEEP DIVE INTO JAMSTACK?
+
+<img
+  style={{ height: "70%", width: "auto" }}
+  src={"https://media.giphy.com/media/14uzPzKMOuVIPu/giphy.gif"}
+/>
+
+---
+
+## BUT FIRST, A BIT OF HISTORY
+
+<img
+  style={{ height: "70%", width: "auto" }}
+  src={
+    "https://www.ilmessaggero.it/photos/MED_HIGH/69/69/5496969_1317_5161831_0954_alberto_angela_compleanno.jpg"
+  }
+/>
+
+---
+
+## TIMELINE
+
+<div style={{ margin: "0", display: "flex" }}>
+  <div style={{ width: "25%", margin: "0 5%" }}>
+    <p style={{ marginBottom: "10px", color: "#01F5C4" }}>2015</p>
+    <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+      Static sites are becoming popular due to the popularity of certain SSG
+      such as Jekyll.
+    </p>
+  </div>
+  <div style={{ width: "25%", margin: "0 5%" }}>
+    <p style={{ marginBottom: "10px", color: "#FE871E" }}>2016</p>
+    <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+      A small group of developers believe that Static sites don't have to be
+      static and the term "JAMstack" comes to life.
+    </p>
+  </div>
+  <div style={{ width: "25%", margin: "0 5%" }}>
+    <p style={{ marginBottom: "10px", color: "#E88DA3" }}>2017</p>
+    <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+      The modern web revolution starts prioritising the importance of
+      performance, scalability and developer experience. The term JAMstack
+      starts to be adopted by a wider group of developers and the first
+      enterprise JAMstack projects are announced.
+    </p>
+  </div>
+  <div style={{ width: "25%", margin: "0 5%" }}>
+    <p style={{ marginBottom: "10px", color: "#0888FC" }}>2018</p>
+    <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+      Tools like Netlify, Gatsby and Contentful have helped promote the term and
+      the community is rapidly growing. This was also the year of the first
+      JAMstack Conference.
+    </p>
+  </div>
+</div>
+
+---
+
+## DEVELOPMENT
+
+<div style={{ margin: "0", display: "flex" }}>
+  <div style={{ width: "30%", margin: "0 5%" }}>
+    <p style={{ marginBottom: "10px" }}>Hand coding</p>
+    <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+      Simple and effective method of writing HTML, it's ideal for super simple
+      pages.
+    </p>
+  </div>
+  <div style={{ width: "30%", margin: "0 5%" }}>
+    <p style={{ marginBottom: "10px" }}>Static Site Generators</p>
+    <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+      Most JAMstack sites are powered by a static site generator. There's no
+      enforcement on which SSG you decide to use.
+    </p>
+    <p
+      style={{
+        fontSize: "20px",
+        color: "#B6B6B6",
+        marginTop: "5px",
+        borderBottom: "1px solid",
+      }}
+    >
+      Gatsby
+    </p>
+    <p
+      style={{
+        fontSize: "20px",
+        color: "#B6B6B6",
+        marginTop: "5px",
+        borderBottom: "1px solid",
+      }}
+    >
+      Next.js
+    </p>
+    <p
+      style={{
+        fontSize: "20px",
+        color: "#B6B6B6",
+        marginTop: "5px",
+        borderBottom: "1px solid",
+      }}
+    >
+      Hugo
+    </p>
+  </div>
+  <div style={{ width: "30%", margin: "0 5%" }}>
+    <p style={{ marginBottom: "10px" }}>Frontend Framework</p>
+    <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+      Most frameworks don't output static HTML files, however it is possible to
+      do that but it requires more tooling experience and maintenance.
+    </p>
+    <p
+      style={{
+        fontSize: "20px",
+        color: "#B6B6B6",
+        marginTop: "5px",
+        borderBottom: "1px solid",
+      }}
+    >
+      React
+    </p>
+    <p
+      style={{
+        fontSize: "20px",
+        color: "#B6B6B6",
+        marginTop: "5px",
+        borderBottom: "1px solid",
+      }}
+    >
+      Vue.js
+    </p>
+    <p
+      style={{
+        fontSize: "20px",
+        color: "#B6B6B6",
+        marginTop: "5px",
+        borderBottom: "1px solid",
+      }}
+    >
+      Preact
+    </p>
+  </div>
+</div>
+
+---
+
+## DEPLOYMENT
+
+<div style={{ margin: "0", display: "flex" }}>
+  <div style={{ width: "90%", margin: "0 5%" }}>
+    <p style={{ marginBottom: "10px" }}>
+      Built sites need to be hosted somewhere.
+      <br />
+      These are the most common used services that provides this for free and
+      with ease.
+    </p>
+    <div style={{ width: "100%" }}>
+      <p
+        style={{
+          fontSize: "20px",
+          color: "#B6B6B6",
+          marginTop: "5px",
+          borderBottom: "1px solid",
+          marginTop: "20px",
+        }}
+      >
+        Netlify
+      </p>
+      <p
+        style={{
+          fontSize: "20px",
+          color: "#B6B6B6",
+          marginTop: "5px",
+          borderBottom: "1px solid",
+        }}
+      >
+        Vercel
+      </p>
+      <p
+        style={{
+          fontSize: "20px",
+          color: "#B6B6B6",
+          marginTop: "5px",
+          borderBottom: "1px solid",
+        }}
+      >
+        Github Pages
+      </p>
+      <p
+        style={{
+          fontSize: "20px",
+          color: "#B6B6B6",
+          marginTop: "5px",
+          borderBottom: "1px solid",
+        }}
+      >
+        Stackbit
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## DYNAMIC PARTS
+
+<div style={{ width: "90%", margin: "0 5%" }}>
+  <p style={{ marginBottom: "10px" }}>
+    JAMstack websites don't have to be static. <br />
+    These are some options available to help bring some dynamic data.
+    <br />
+  </p>
+</div>
+<div
+  style={{
+    margin: "0",
+    display: "flex",
+    width: "100%",
+    flexDirection: "column",
+  }}
+>
+  <div style={{ width: "100%", display: "flex" }}>
+    <div style={{ width: "30%", margin: "0 5%" }}>
+      <p style={{ marginBottom: "10px" }}>Custom functions</p>
+      <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+        It is possible to abstract functions into reusable APIs.
+        <br />
+        For this can be used AWS lambda functions or Netlify Functions!!
+      </p>
+    </div>
+    <div style={{ width: "30%", margin: "0 5%" }}>
+      <p style={{ marginBottom: "10px" }}>Comments</p>
+      <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+        Many JAMstack products have dynamic comment sections. These are
+        typically used on blogs
+      </p>
+    </div>
+    <div style={{ width: "30%", margin: "0 5%" }}>
+      <p style={{ marginBottom: "10px" }}>E-Commerce</p>
+      <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+        Setting up an online store on the JAMstack has never been easier
+      </p>
+    </div>
+  </div>
+  <div style={{ width: "100%", display: "flex" }}>
+    <div style={{ width: "30%", margin: "0 5%" }}>
+      <p style={{ marginBottom: "10px" }}>Custom data</p>
+      <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+        As features are added to the site, storing user profiles, shopping cart
+        data, game levels, or other dynamic data it is possible for free with
+        FaunaDB Serverless GraphQL
+      </p>
+    </div>
+    <div style={{ width: "30%", margin: "0 5%" }}>
+      <p style={{ marginBottom: "10px" }}>Forms</p>
+      <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+        A great way to interact with the audience
+      </p>
+    </div>
+    <div style={{ width: "30%", margin: "0 5%" }}>
+      <p style={{ marginBottom: "10px" }}>Search</p>
+      <p style={{ fontSize: "20px", color: "#B6B6B6", marginTop: "5px" }}>
+        Rely on third party services to integrate a search functionality
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## CMS
+
+<div style={{ margin: "0", display: "flex" }}>
+  <div style={{ width: "90%", margin: "0 5%" }}>
+    <p style={{ marginBottom: "10px", fontSize: "28px" }}>
+      JAMstack sites can also be controlled via a Content Management System,
+      these are typically known as{" "}
+      <span style={{ color: "#E88DA3" }}>Headless CMS</span>. Once a change in
+      the CMS is made, a new build of your site will be triggered and then
+      deployed as static assets.
+    </p>
+    <div style={{ width: "100%" }}>
+      <p
+        style={{
+          fontSize: "20px",
+          color: "#B6B6B6",
+          marginTop: "5px",
+          borderBottom: "1px solid",
+          marginTop: "20px",
+        }}
+      >
+        Netlify CMS
+      </p>
+      <p
+        style={{
+          fontSize: "20px",
+          color: "#B6B6B6",
+          marginTop: "5px",
+          borderBottom: "1px solid",
+        }}
+      >
+        Contentful
+      </p>
+      <p
+        style={{
+          fontSize: "20px",
+          color: "#B6B6B6",
+          marginTop: "5px",
+          borderBottom: "1px solid",
+        }}
+      >
+        Headless WordPress
+      </p>
+      <p
+        style={{
+          fontSize: "20px",
+          color: "#B6B6B6",
+          marginTop: "5px",
+          borderBottom: "1px solid",
+        }}
+      >
+        Ghost
+      </p>
+      <p
+        style={{
+          fontSize: "20px",
+          color: "#B6B6B6",
+          marginTop: "5px",
+          borderBottom: "1px solid",
+        }}
+      >
+        Strapi
+      </p>
+      <p
+        style={{
+          fontSize: "20px",
+          color: "#B6B6B6",
+          marginTop: "5px",
+          borderBottom: "1px solid",
+        }}
+      >
+        Forestry
+      </p>
+      <p
+        style={{
+          fontSize: "20px",
+          color: "#B6B6B6",
+          marginTop: "5px",
+          borderBottom: "1px solid",
+        }}
+      >
+        Sanity.io
+      </p>
+      <p
+        style={{
+          fontSize: "20px",
+          color: "#B6B6B6",
+          marginTop: "5px",
+          borderBottom: "1px solid",
+        }}
+      >
+        Kontent
+      </p>
+      <p
+        style={{
+          fontSize: "20px",
+          color: "#B6B6B6",
+          marginTop: "5px",
+          borderBottom: "1px solid",
+        }}
+      >
+        GraphCMS
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+<img
+  style={{ height: "60%", width: "auto" }}
+  src={"https://media.giphy.com/media/g9582DNuQppxC/giphy.gif"}
+/>
+
+## AND NOW, MY CHOICES FOR JAMSTACK
+
+<div>
+  <p style={{ margin: 0, textAlign: "center", fontSize: "28px" }}>
+    (Hint included)
+    <br />
+  </p>
+</div>
+
+---
+
+<div style={{ margin: "0", display: "flex" }}>
+  <div style={{ width: "90%", margin: "0 5%" }}>
+    <div style={{ width: "100%" }}>
+      <p
+        style={{
+          fontSize: "32px",
+          color: "#B6B6B6",
+          marginTop: "5px",
+          borderBottom: "1px solid",
+          marginTop: "20px",
+        }}
+      >
+        GATSBY
+      </p>
+      <p style={{ marginBottom: "10px", fontSize: "24px" }}>
+        Gatsby is a React-based open source framework for creating websites and
+        apps. It's a great technology because of its{" "}
+        <span style={{ color: "#E88DA3" }}>over 2000 plugins </span>and
+        <span style={{ color: "#E88DA3" }}> performance</span>, <span
+          style={{ color: "#E88DA3" }}
+        >
+          scalability
+        </span>
+        &nbsp;and
+        <span style={{ color: "#E88DA3" }}> security</span> built-in by default.
+      </p>
+      <p
+        style={{
+          fontSize: "32px",
+          color: "#B6B6B6",
+          marginTop: "5px",
+          borderBottom: "1px solid",
+          marginTop: "20px",
+        }}
+      >
+        MDX
+      </p>
+      <p style={{ marginBottom: "10px", fontSize: "24px" }}>
+        MDX is an authorable format that lets seamlessly{" "}
+        <span style={{ color: "#E88DA3" }}>
+          write JSX in Markdown documents.
+        </span>
+        <br />
+        Components can be imported, such as interactive charts or alerts, and
+        embed them within content. This makes writing long-form content with
+        components a blast 🚀.
+      </p>
+      <p
+        style={{
+          fontSize: "32px",
+          color: "#B6B6B6",
+          marginTop: "5px",
+          borderBottom: "1px solid",
+          marginTop: "20px",
+        }}
+      >
+        NETLIFY CMS
+      </p>
+      <p style={{ marginBottom: "10px", fontSize: "24px" }}>
+        A CMS for static site generators.
+        <br />
+        Give users a simple way to edit and add content to any site built with a
+        static site generator. <br />
+        It is a <span style={{ color: "#E88DA3" }}>single-page app</span> that you
+        pull into the /admin part of your site.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+<img
+  style={{ height: "70%", width: "auto" }}
+  src={"https://media.giphy.com/media/XmbsL1sfBEsbS/giphy.gif"}
+/>
+
+# THANK YOU!
